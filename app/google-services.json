@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "322294450529",
+    "project_id": "reader-9bfea",
+    "storage_bucket": "reader-9bfea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322294450529:android:612f3e08264212e1439d20",
+        "android_client_info": {
+          "package_name": "sk.sandeep.readerappcompose"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322294450529-6vst6l3rbp0delhmiphjlv1utoft6i6u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0FQVpu3IbCZRrjLvjfOP5akU3xVEHFqo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322294450529-6vst6l3rbp0delhmiphjlv1utoft6i6u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
