@@ -88,7 +88,9 @@ fun BookList(navController: NavController, viewModel: ReaderBookSearchViewModel 
 @Composable
 fun BookRow(books: Item, navController: NavController) {
     Card(modifier = Modifier
-        .clickable { }
+        .clickable {
+            navController.navigate(ReaderScreens.DetailScreen.name + "/${books.id}")
+        }
         .fillMaxWidth()
         .height(100.dp)
         .padding(3.dp),

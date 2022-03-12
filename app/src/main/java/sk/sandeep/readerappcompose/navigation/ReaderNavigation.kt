@@ -2,9 +2,11 @@ package sk.sandeep.readerappcompose.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import sk.sandeep.readerappcompose.ui.screens.details.BookDetailScreen
 import sk.sandeep.readerappcompose.ui.screens.home.Home
 import sk.sandeep.readerappcompose.ui.screens.login.ReaderLoginScreen
@@ -22,8 +24,13 @@ fun ReaderNavigation() {
         startDestination = ReaderScreens.SplashScreen.name
     ) {
 
-        composable(ReaderScreens.DetailScreen.name) {
-            BookDetailScreen(navController = navController)
+        val detailName = ReaderScreens.DetailScreen.name
+        composable("$detailName/{bookId}", arguments = listOf(navArgument("bookId") {
+            type = NavType.StringType
+        })) { backStackEntry ->
+            backStackEntry.arguments?.getString("bookId").let {
+                BookDetailScreen(navController = navController, bookId = it.toString())
+            }
         }
 
         composable(ReaderScreens.ReaderHomeScreen.name) {
